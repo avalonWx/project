@@ -1,0 +1,33 @@
+.header-right{
+    display: inline-block;
+    width: fill-available;
+    .title{
+        display: flex;
+        align-items: center;
+        span:first-child{
+            font-size:18px;
+        }
+        span:last-child{
+            line-height:1.5;
+            margin:0 15px;
+        }
+    }
+    .ant-badge{
+        color: rgba(0,0,0,.65);
+        vertical-align: middle;
+    }
+    .notice-action-icon{
+        font-size:22px;
+    }
+    .user-data{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        > div{
+            padding:0 15px;
+            display: flex;
+            flex-direction: column;
+            line-height:1.5;
+        }
+    }
+}
