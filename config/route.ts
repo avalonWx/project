@@ -1,54 +1,53 @@
-import { IRoute } from 'umi-types'
+import { IRoute } from 'umi-types';
 
-export const routes: IRoute[] =  [
-    { 
-        path: '/', 
-        component: '@/pages/index',
+export const routes: IRoute[] = [
+  {
+    path: '/',
+    component: '@/pages/index',
+    icon: 'HomeOutlined',
+    menu: {
+      name: '首页',
+    },
+  },
+  {
+    path: '/target',
+    component: '@/layouts/index',
+    menu: {
+      name: '指标',
+    },
+    routes: [
+      {
+        path: '/target/store',
+        component: '@/pages/TargetStore',
+        icon: 'GoldOutlined',
         menu: {
-            name: '首页',
-            icon: 'HomeOutlined',
+          name: '指标库',
         },
-    },
-    { 
-        path: '/target',
-        component: '@/layouts/index',
+      },
+      {
+        path: '/target/setting',
+        component: '@/pages/TargetSetting',
+        icon: 'SettingOutlined',
         menu: {
-            name: '指标',
-            icon: 'PicRightOutlined',
+          name: '指标设置',
         },
-        routes:[
-            { 
-                path: '/target/store',
-                component: '@/pages/TargetStore',
-                menu: {
-                    name: '指标库',
-                    icon: 'GoldOutlined',
-                }
-            },
-            { 
-                path: '/target/setting', 
-                component: '@/pages/TargetSetting',
-                menu: {
-                    name: '指标设置',
-                    icon: 'SettingOutlined',
-                }
-            },
-        ]
+      },
+    ],
+  },
+  {
+    path: '/login',
+    component: '@/pages/Login',
+    layout: {
+      hideMenu: true,
+      hideNav: true,
     },
-    { 
-        path: '/login', 
-        component: '@/pages/Login',
-        layout : {
-            hideMenu : true,
-            hideNav  : true
-        }
+  },
+  {
+    path: '/404',
+    component: '@/pages/404',
+    layout: {
+      hideMenu: true,
+      hideNav: true,
     },
-    {
-        path: '/404', 
-        component: '@/pages/404',
-        layout : {
-            hideMenu : true,
-            hideNav  : true
-        }
-    },
-]
+  },
+];
