@@ -12,25 +12,20 @@ export const routes: IRoute[] = [
   {
     path: '/target',
     component: '@/layouts/index',
-    menu: {
-      name: '指标',
-    },
+    icon: 'FileProtectOutlined',
+    name: '指标',
     routes: [
       {
         path: '/target/store',
         component: '@/pages/TargetStore',
         icon: 'GoldOutlined',
-        menu: {
-          name: '指标库',
-        },
+        name: '指标库',
       },
       {
         path: '/target/setting',
         component: '@/pages/TargetSetting',
         icon: 'SettingOutlined',
-        menu: {
-          name: '指标设置',
-        },
+        name: '指标设置',
       },
     ],
   },
