@@ -2,11 +2,7 @@ import { defineConfig } from 'umi';
 import { routes } from './config/route';
 
 export default defineConfig({
-  antd: {
-    dark: true,
-  },
   layout: {
-    theme: 'pro',
     fixedHeader: true,
   },
   nodeModulesTransform: {
@@ -15,5 +11,8 @@ export default defineConfig({
   routes,
   sass: {
     implementation: require('node-sass'),
+  },
+  antd: {
+    dark: true,
   },
 });

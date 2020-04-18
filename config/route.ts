@@ -5,9 +5,7 @@ export const routes: IRoute[] = [
     path: '/',
     component: '@/pages/index',
     icon: 'HomeOutlined',
-    menu: {
-      name: '首页',
-    },
+    name: '首页',
   },
   {
     path: '/target',
